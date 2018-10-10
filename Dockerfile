@@ -3,7 +3,7 @@ FROM ubuntu:xenial
 MAINTAINER André Cianfarani <a.cianfarani@c2is.fr>
 
 RUN apt-get update && \ 
- apt-get install -y php-common php-cli php-fpm php-mysql php-curl php-gd php-intl php-xmlrpc php-zip php-dom php-imagick php-xsl php-mcrypt && \
+ apt-get install -y php-common php-cli php-fpm php-mysql php-curl php-gd php-intl php-xml php-xmlrpc php-zip php-dom php-imagick php-xsl php-mcrypt && \
  apt-get install -y ssmtp && \   
  apt-get clean && \
  echo "FromLineOverride=YES" >> /etc/ssmtp/ssmtp.conf && \
