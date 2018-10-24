@@ -14,7 +14,7 @@ RUN apt-get update && \
  echo "hostname=acti.fr" >> /etc/ssmtp/ssmtp.conf && \
  echo "root:web:mail" >> /etc/ssmtp/revaliases && \
  echo 'sendmail_path = "/usr/sbin/ssmtp -t"' >> /etc/php5/fpm/php.ini && \
- sed -i "s|listen = /run/php/php7.0-fpm.sock|listen = 9000|ig" /etc/php5/fpm/pool.d/www.conf
+ sed -i "s|listen = /var/run/php5-fpm.sock|listen = 9000|ig" /etc/php5/fpm/pool.d/www.conf
  
 
 RUN service php5-fpm start
