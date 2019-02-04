@@ -13,12 +13,12 @@ RUN apt-get update && \
  echo "AuthPass=web" >> /etc/ssmtp/ssmtp.conf && \
  echo "hostname=acti.fr" >> /etc/ssmtp/ssmtp.conf && \
  echo "root:web:mail" >> /etc/ssmtp/revaliases && \
- echo 'sendmail_path = "/usr/sbin/ssmtp -t"' >> /etc/php/7.0/fpm/php.ini && \
- sed -i "s|listen = /run/php/php7.0-fpm.sock|listen = 9000|ig" /etc/php/7.0/fpm/pool.d/www.conf
+ echo 'sendmail_path = "/usr/sbin/ssmtp -t"' >> /etc/php/7.3/fpm/php.ini && \
+ sed -i "s|listen = /run/php/php7.0-fpm.sock|listen = 9000|ig" /etc/php/7.3/fpm/pool.d/www.conf
  
 
-RUN service php7.0-fpm start
-CMD ["php-fpm7.0", "-F"]
+RUN service php7.3-fpm start
+CMD ["php-fpm7.3", "-F"]
 
 EXPOSE 9000
 
