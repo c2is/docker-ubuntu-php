@@ -12,8 +12,8 @@ RUN \
     apt-get -y autoremove && \
     apt-get clean && \
     echo "account default" >  /etc/msmtprc && \
-    echo "host mailhog" >> /etc/msmtprc && \
-    echo "port 1025" >> /etc/msmtprc && \
+    echo "host maildev" >> /etc/msmtprc && \
+    echo "port 25" >> /etc/msmtprc && \
     echo "from default@dev.acti" >> /etc/msmtprc && \
     echo "logfile /var/log/msmtp.log" >> /etc/msmtprc && \
     echo "sendmail_path=/usr/bin/msmtp -t" >> /etc/php/7.3/fpm/php.ini && \
